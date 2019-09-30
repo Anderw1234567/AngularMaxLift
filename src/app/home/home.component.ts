@@ -8,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   title = 'maxlift';
 
+  guysName = '';
+  displayWelcomeName = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  clickNameButton(){
+
+    console.log("HELLO" + this.guysName)
+    this.displayWelcomeName = !this.displayWelcomeName;
   }
 }

@@ -1,5 +1,24 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<ActionBar [title]="title"></ActionBar>
-<StackLayout  class="p-20">
-    <Label text="Welcome to {{ title }}!" class="h1 text-center" textWrap="true"></Label>
+
+<ActionBar title="Application Title" style="visibility:hidden;"></ActionBar>
+<StackLayout>
+
+
+    <Label text="Enter how much weight you lifted" class="h2 text-center" style="margin-top:5%;"textWrap="true"></Label>
+
+	<TextField class="input" keyboardType="number" hint="9000" [(ngModel)]="this.guysName" style="margin-top:5%;text-align:center;width:30%;"></TextField>
+
+
+
+
+    <Label text="For how many repititions?" class="h2 text-center" style="margin-top:5%;"textWrap="true"></Label>
+
+
+
+
+	<TextField class="input" hint="10" [(ngModel)]="this.guysName" style="margin-top:5%;text-align:center;width:30%;"></TextField>
+    <Button (tap)="this.clickNameButton()" class="btn btn-primary btn-rounded-lg" style="margin-top:5%;width:30%;text-align:center;"text="Click me!"></Button>
+
+    <Label text="Welcome, {{ this.guysName }}!" *ngIf="this.displayWelcomeName" style="margin-top:5%;text-align:center;width:30%;"></Label>S
+
 </StackLayout>
